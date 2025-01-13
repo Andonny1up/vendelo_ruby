@@ -8,4 +8,8 @@ class ProductsController < ApplicationController
         
         @product = Product.find(id)
     end
+
+    def new
+        @product = Product.new
+    end
 end
