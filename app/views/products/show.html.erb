@@ -7,4 +7,9 @@
 <p class='description'><%= @product.description%></p>
 <p class='price'><%= @product.price%>$</p>
 
-<%= link_to 'Editar producto', edit_product_path(@product.id)%>
+<%= link_to 'Editar producto', edit_product_path(@product.id) %>
+
+<%= link_to 'Eliminar producto', product_path(@product.id), data:{
+    turbo_method: :delete,
+    turbo_confirm: '¿Estás seguro que quieres eliminar este producto?'
+} %>
