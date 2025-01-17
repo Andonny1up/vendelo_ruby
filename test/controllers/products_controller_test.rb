@@ -46,4 +46,31 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
         assert_response :unprocessable_entity
     end
+    test 'render an edit product form' do
+        get edit_product_path(products(:A06).id)
+
+        assert_response :success
+        assert_select 'form'
+    end
+
+    test 'allow to update a product' do 
+        patch product_path(products(:A06).id), params: {
+            product: {
+                price: 555
+            }
+        }
+
+        assert_redirected_to products_path
+        assert_equal flash[:notice], 'Tu producto se ha actualizado'
+    end
+
+    test 'does not allow to update a product with an invalid field' do 
+        patch product_path(products(:A06).id), params: {
+            product: {
+                price: nil
+            }
+        }
+
+        assert_response :unprocessable_entity
+    end
 end
