@@ -29,3 +29,8 @@
 
 en:
   hello: "Hello world"
+  products:
+    edit:
+      title: "Edit Product"
+    new:
+      title: "New Product"
