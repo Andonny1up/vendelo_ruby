@@ -29,8 +29,43 @@
 
 en:
   hello: "Hello world"
+  common:
+    confirm: "Are you sure?"
+    back: "Go back"
+  shared:
+    header:
+      add: "Add product"
+      categories: "Categories"
   products:
     edit:
       title: "Edit Product"
     new:
       title: "New Product"
+    index:
+      title: "Products"
+    show:
+      edit: "Edit Product"
+      delete: "Delete Product"
+    create:
+      created: "Your product has been successfully created"
+    update:
+      updated: "Your product has been successfully updated"
+    destroy:
+      destroyed: "Your product has been successfully destroyed"
+  categories:
+    category:
+      edit: "Edit"
+      delete: "delete"
+    index:
+      title: "Categories"
+      new: "Add category"
+    edit:
+      title: "Edit Category"
+    new:
+      title: "New Category"
+    create:
+      created: "Your category has been successfully created"
+    update:
+      updated: "Your category has been successfully updated"
+    destroy:
+      destroyed: "Your category has been successfully destroyed"
