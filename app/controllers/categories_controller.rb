@@ -39,7 +39,7 @@ class CategoriesController < ApplicationController
 
   # DELETE /categories/1 
   def destroy
-    @category.destroy!
+    category.destroy!
 
     redirect_to categories_path, status: :see_other, notice: t('.destroyed')
   end
